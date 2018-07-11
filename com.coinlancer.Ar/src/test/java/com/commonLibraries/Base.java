@@ -13,11 +13,11 @@ import org.testng.annotations.BeforeTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class Base {
-	public WebDriver driver;
+	public static WebDriver driver;
 	@BeforeTest
 	public void openBrowser() {
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\software1\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
 		  driver=new ChromeDriver();
 		  driver.manage().window().maximize();  
 		

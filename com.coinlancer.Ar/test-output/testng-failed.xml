@@ -5,7 +5,6 @@
     <classes>
       <class name="com.coinlancer.SignUp.VerifyRadioButons">
         <methods>
-          <include name="closeBrowser"/>
           <include name="openBrowser"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
