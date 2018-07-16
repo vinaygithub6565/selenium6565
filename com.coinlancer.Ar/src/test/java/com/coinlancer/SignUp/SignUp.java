@@ -2,41 +2,26 @@ package com.coinlancer.SignUp;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.commonLibraries.Base;
 import com.commonLibraries.ExtentTestManager;
 import com.commonLibraries.ReadProperties;
 import com.relevantcodes.extentreports.LogStatus;
-
 import static com.commonLibraries.Locators.*;
 import static com.commonLibraries.Common.*;
 import static com.coinlancerProjectSpecificCommon.CommonProject.*;
+@Listeners(com.commonLibraries.Listener.class)
+public class SignUp extends Base {
 
-
-public class VerifyRadioButon extends Base 
-{
-
-
+	String url = "http://13.127.90.210/login";
 
 	@Test
-	public static void verifyRadioButton() throws IOException
-	{
-		String username = ReadProperties.getPropValue("Username");
-		String password = ReadProperties.getPropValue("Password");
-		String url = ReadProperties.getPropValue("url");
-		//System.setProperty("webdriver.chrome.driver", "E:\\automation1\\chromedriver.exe");
-		//driver=new ChromeDriver();
-		//driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-		driver.get("http://13.127.90.210/login");
-		RadioButton("freelancer",username,password);
+	public void verifyRegistration() throws IOException {
+		String password = ReadProperties.getPropValue("password");
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		openUrl(url);
 		getWhenVisible(SignUp_Button);
 		clickElement(SignUp_Button);
@@ -48,8 +33,9 @@ public class VerifyRadioButon extends Base
 		enterText(LastName_Textbox, lastName);
 		String userName = randomUserNameGenerator();
 		enterText(UserName_Textbox, userName);
-		enterText(password_Textbox, password);
-		enterText(confirmpassword_Textbox, password);
+		String password1 = randomUserPasswordGenerator();
+		enterText(password_Textbox, password1);
+		enterText(confirmpassword_Textbox, password1);
 		String email = randomEmailNameGenerator();
 		enterText(email_Textbox, email);
 		clickElement(Register_button);
@@ -67,13 +53,19 @@ public class VerifyRadioButon extends Base
 
 	}
 
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

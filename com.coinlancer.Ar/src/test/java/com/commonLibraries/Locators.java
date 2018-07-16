@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class Locators {
 	//sign up page//
-	public static By SignUp_Button = By.xpath("//*[@id='navbarSupportedContent']/ul/li[5]/a/1");
+	public static By SignUp_Button = By.linkText("SIGN UP");
 	public static By Client_RadioButton=By.xpath("//label[@for='customRadioInline1']");
 	public static By Freelancer_RadioButton=By.xpath("//label[@for='customRadioInline2']");
 	public static By FirstName_Textbox=By.name("name");
@@ -13,8 +13,9 @@ public class Locators {
 	public static By password_Textbox=By.name("password");
 	public static By confirmpassword_Textbox=By.name("conformpassword");
 	public static By email_Textbox=By.name("emailId");
+	public static By Register_button=By.xpath("/html/body/div[1]/app-root/div/app-register/div/div/div[2]/div/form/div[7]/button[1]");
 	public static By clear_Button=By.linkText("CLEAR");
-	public static By Register_button=By.linkText("REGISTER");
+	
 	
 	//Login page//
 	public static By ClientRadio = By.xpath("//div['@class=custom-control custom-radio custom-control-inline']/label)[1]");
@@ -54,7 +55,7 @@ public class Locators {
      public static By categories_Dropdownbox=By.id("categories");
      public static By subcategory_Dropdownbox=By.id("subcategories");
      public static By skills_dropdownbox=By.xpath ("//div[@class='mat-select-value']");
-     //Freelancer
+   
      //public static By EditProfile_Button = By.xpath ("//button[text()='Edit Profile']");//
      
      // USER NAME DROP DOWN BUTTON//     

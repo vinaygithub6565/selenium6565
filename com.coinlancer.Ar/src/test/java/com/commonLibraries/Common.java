@@ -3,9 +3,13 @@ package com.commonLibraries;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
+import java.util.UUID;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -17,21 +21,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-
-
-
-
-
-
-
 public class Common extends Base{
 
-	public static void openUrl(String url) 
-	{
 
-		driver.get(url);
-	}
 
 	public static void clickElement(By locator) {
 
@@ -70,7 +62,7 @@ public class Common extends Base{
 
 	public static void explicitwait(By locator) 
 	{ 
-
+ 
 		WebDriverWait wait=new WebDriverWait(driver,60);
 		WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
@@ -99,7 +91,110 @@ public class Common extends Base{
 		alert.getText();
 
 	}
+
+
+	public static String randomFirstNameGenerator(By locator) {
+		String uuid = UUID.randomUUID().toString();
+		driver.findElement(By.id("text box id")).sendKeys(uuid);
+		return null;
+	}
+
+
+
+	public static boolean isElementPresent(By locator) {
+
+		boolean b = driver.findElement(locator).isDisplayed();
+
+		if (b == true) {
+			return true;
+		}
+
+		else {
+			return false;
+		}
+
+	}
+
+
+	public static void openUrl(String url) 
+	{
+
+		driver.get(url);
+	}
+
+
+	public static void getWhenVisible(By locator) {
+
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+
+	public static void getTextOfalert(By locator) {
+		Alert alert = driver.switchTo().alert();
+		alert.getText();
+
+	}
+
+	public static String randomFirstNameGenerator() {
+		String generatedString = "FirstName " + RandomStringUtils.randomAlphabetic(5);
+		return generatedString;
+	}
+
+	public static String randomLastNameGenerator() {
+		String generatedString = "LastName" + RandomStringUtils.randomAlphabetic(5);
+
+		return generatedString;
+	}
+
+	public static String randomUserNameGenerator() {
+		Random rand = new Random();
+		int rand1 = rand.nextInt(10000);
+
+		String userName = "UserName" + rand1;
+		return userName;
+	}
+	
+	public static String randomUserPasswordGenerator() {
+		Random rand = new Random();
+		int rand1 = rand.nextInt(10000);
+		String password = "UserPassword" + rand1 + "Vin@y6565";
+		return password;
+		
+		
+	}
+
+	public static String randomEmailNameGenerator() {
+		Random rand = new Random();
+		int rand1 = rand.nextInt(10000);
+
+		String emailID = "email" + rand1 + "@yopmail.com";
+		return emailID;
+	}
+
+	public static String randomProjectGenerator() {
+		Random rand = new Random();
+		int rand1 = rand.nextInt(10000);
+
+		String projectTitle = "AutomationProject " + rand1;
+		return projectTitle;
+	}
+
+	public static List<String> getSkills(String args[]) {
+
+		List al = Arrays.asList(args);
+		return al;
+
+	}
+
 }
+
+
+
+
+
+
+
+
 
 
 
