@@ -4,11 +4,13 @@ import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -16,12 +18,30 @@ public class Base {
 	public static WebDriver driver;
 	@BeforeTest
 	public void openBrowser() {
-		
-		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
+
+	System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
 		  driver=new ChromeDriver();
-		  driver.manage().window().maximize();  
+		  driver.manage().window().maximize();
+	}
+	@Parameters("browser")
+	public void setup(String browser) throws Exception{
+
+		if(browser.equalsIgnoreCase("Firefox")){
+
+			System.setProperty("webdriver.gecko.driver", "E:\\geckodriver.exe");
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize(); 
+		}
+
+		else if(browser.equalsIgnoreCase("chrome")){
+
+			System.setProperty("webdriver.chrome.driver","E:\\chromedriver.exe");
+
+			driver = new ChromeDriver();
+			driver.manage().window().maximize(); 
 		
 	}
+	}		
 	
 	@BeforeMethod(alwaysRun=true)
 	public void beforeMethod(Method method,ITestContext test) {

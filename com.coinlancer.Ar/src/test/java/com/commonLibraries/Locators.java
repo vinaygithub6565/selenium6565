@@ -14,17 +14,18 @@ public class Locators {
 	public static By confirmpassword_Textbox=By.name("conformpassword");
 	public static By email_Textbox=By.name("emailId");
 	public static By Register_button=By.xpath("/html/body/div[1]/app-root/div/app-register/div/div/div[2]/div/form/div[7]/button[1]");
-	public static By clear_Button=By.linkText("CLEAR");
+	public static By clear_Button=By.xpath("/html/body/div/app-root/div/app-register/div/div/div[2]/div/form/div[7]/button[2]");
 	
 	
 	//Login page//
-	public static By ClientRadio = By.xpath("//div['@class=custom-control custom-radio custom-control-inline']/label)[1]");
-	public static By FreelancerRadio = By.xpath("(//div['@class=custom-control custom-radio custom-control-inline']/label)[2]");
+	public static By Client_Radiobutton = By.xpath("//label[@for='customRadioInline12']");
+	public static By Freelancer_Radiobutton = By.xpath("//label[@for='customRadioInline13']");
 	public static By Username_Textbox = By.id("uname");
 	public static By Password_Textbox = By.id("uname1"); 
 	public static By Forgotpassword_Textbox = By.linkText("Forgot password?");
-	public static By Login_Button = By.xpath ("//button[text()='LOG IN']");
+	public static By Login_Button = By.linkText("LOGIN");
 	public static By Register_Button = By.linkText("REGISTER");
+	public static By details_Login=By.xpath("/html/body/div/app-root/div/app-login/div[1]/div/div[2]/form/div[5]/div/div[1]/button");
 
     //After clicking the Forgot password//
      public static By Forgotpassword_email_Textbox =By.name("emailId");
