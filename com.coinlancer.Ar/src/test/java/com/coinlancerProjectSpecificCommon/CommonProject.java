@@ -16,14 +16,14 @@ public class CommonProject extends Base {
 	public static void login(String userType, String userName, String password) throws InterruptedException {
 
 		if ((userType.equalsIgnoreCase("Client")) || (userType.equalsIgnoreCase("client"))) {
-			driver.get("http://13.127.90.210/login");
+			driver.get("http://13.232.178.181/login");
 			driver.findElement(Client_RadioButton).click();
 			driver.findElement(Username_Textbox).sendKeys(userName);
 			driver.findElement(Password_Textbox).sendKeys(password);
 			driver.findElement(Login_Button).click();
 		}
 		if ((userType.equalsIgnoreCase("Freelancer")) || (userType.equalsIgnoreCase("freelancer"))) {
-			driver.get("http://13.127.90.210/login");
+			driver.get("http://13.232.178.181/login");
 			driver.findElement(Freelancer_RadioButton).click();
 			driver.findElement(Username_Textbox).sendKeys(userName);
 			driver.findElement(Password_Textbox).sendKeys(password);

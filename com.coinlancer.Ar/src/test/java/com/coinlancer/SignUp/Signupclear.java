@@ -18,52 +18,47 @@ import static com.coinlancerProjectSpecificCommon.CommonProject.*;
 public class Signupclear extends Base {
 
 	String url= "http://13.127.90.210/login";
-	
+
 	@Test
-	public void verifyRegistration() throws IOException { 
-	
-		    String password = ReadProperties.getPropValue("password");
-			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			openUrl(url);
-			getWhenVisible(SignUp_Button);
-			clickElement(SignUp_Button);
-			getWhenVisible(Freelancer_RadioButton);
-			clickElement(Freelancer_RadioButton);
-			String firstName = randomFirstNameGenerator();
-			enterText(FirstName_Textbox, firstName);
-			String lastName = randomLastNameGenerator();
-			enterText(LastName_Textbox, lastName);
-			String userName = randomUserNameGenerator();
-			enterText(UserName_Textbox, userName);
-			String password1 = randomUserPasswordGenerator();
-			enterText(password_Textbox, password1);
-			enterText(confirmpassword_Textbox, password1);
-			String email = randomEmailNameGenerator();
-			enterText(email_Textbox, email);
-			clickElement(clear_Button);
+	public void verifyclearButton() throws IOException { 
 
-			boolean loginPage = isElementPresent(Username_Textbox);
+		String password = ReadProperties.getPropValue("password");
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		openUrl(url);
+		getWhenVisible(SignUp_Button);
+		clickElement(SignUp_Button);
+		getWhenVisible(Freelancer_RadioButton);
+		clickElement(Freelancer_RadioButton);
+		String firstName = randomFirstNameGenerator();
+		enterText(FirstName_Textbox, firstName);
+		String lastName = randomLastNameGenerator();
+		enterText(LastName_Textbox, lastName);
+		String userName = randomUserNameGenerator();
+		enterText(UserName_Textbox, userName);
+		String password1 = randomUserPasswordGenerator();
+		enterText(password_Textbox, password1);
+		enterText(confirmpassword_Textbox, password1);
+		String email = randomEmailNameGenerator();
+		enterText(email_Textbox, email);
+		clickElement(clear_Button);
 
-			if(loginPage==true){
 
-				ExtentTestManager.getTest().log(LogStatus.PASS, "User Created Successfully");
-			}
-			else{
-				ExtentTestManager.getTest().log(LogStatus.FAIL, "User Creation Failed");
+	}
 
-			}
 
-		}
+
+
 }
 
-	
-		
-		
-		
 
 
-		
 
-		
 
-	
+
+
+
+
+
+
+
+

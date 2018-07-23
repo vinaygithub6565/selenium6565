@@ -1,4 +1,4 @@
-package com.coinlancerProjectSpecificCommon;
+package com.coinlancer.SignUp;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -17,52 +17,29 @@ import static com.commonLibraries.Common.*;
 import static com.coinlancerProjectSpecificCommon.CommonProject.*;
 @Listeners(com.commonLibraries.Listener.class)
 
-public class Login extends Base
-{
-	String url = "http://13.232.178.181/register";
-	
-			
+public class PostAproject extends Base {
+	String url = "http://13.232.178.181/home";
 	@Test
-	public void verifyLogin() throws IOException {
+	public void verifypostaproject() throws IOException {
 		String userName = ReadProperties.getPropValue("Username");
 		String password = ReadProperties.getPropValue("Password");
-		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		openUrl(url);
-		getWhenVisible(Login_Button);
-		clickElement(Login_Button);
+		getWhenVisible(Postaproject_Button);
+		clickElement(Postaproject_Button);
 		getWhenVisible(Client_Radiobutton);
 		clickElement(Client_Radiobutton);
-        enterText(Username_Textbox, userName);
+		enterText(Username_Textbox, userName);
 		enterText(password_Textbox, password);
 		clickElement(details_Login);
-		
-		
-		boolean registerPage = isElementPresent(Username_Textbox);
-
-		if(registerPage==true){
-
-			ExtentTestManager.getTest().log(LogStatus.PASS, "User Created Successfully");
-		}
-		else{
-			ExtentTestManager.getTest().log(LogStatus.FAIL, "User Creation Failed");
-
-		}
-
+		clickElement(Postaproject_Button);
 	}
 
+}
 
-	}
 
-		
-			
-			
 
-		
 
-	
 
-	
-	
-	
-   
+
+

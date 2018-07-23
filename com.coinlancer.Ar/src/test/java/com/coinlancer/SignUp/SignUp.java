@@ -1,4 +1,4 @@
-package com.coinlancer.SignUp;
+ package com.coinlancer.SignUp;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -16,7 +16,7 @@ import static com.coinlancerProjectSpecificCommon.CommonProject.*;
 @Listeners(com.commonLibraries.Listener.class)
 public class SignUp extends Base {
 
-	String url = "http://13.127.90.210/login";
+	String url = "http://13.232.178.181/login";
 
 	@Test
 	public void verifyRegistration() throws IOException {

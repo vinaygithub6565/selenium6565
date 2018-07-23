@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.coinlancer.SignUp.SignUp">
+      <class name="com.coinlancerProjectSpecificCommon.Login">
         <methods>
+          <include name="verifyLogin"/>
           <include name="openBrowser"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verifyRegistration"/>
         </methods>
-      </class> <!-- com.coinlancer.SignUp.SignUp -->
+      </class> <!-- com.coinlancerProjectSpecificCommon.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
