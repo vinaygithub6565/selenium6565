@@ -2,7 +2,7 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestSuite" >
+<suite name="TestSuite" parallel="tests" >
 
 <test name="ChromeTest">
 
@@ -10,7 +10,7 @@
 
 <classes>
 
-<class name="com.coinlancerProjectSpecificCommon.CommonProject">
+<class name="com.coinlancerProjectSpecificCommon.PostAproject">
 
 </class>
 
@@ -24,7 +24,7 @@
 
 <classes>
 
-<class name="com.coinlancerProjectSpecificCommon.CommonProject">
+<class name="com.coinlancerProjectSpecificCommon.PostAproject">
 
 </class>
 

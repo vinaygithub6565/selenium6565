@@ -61,13 +61,13 @@ public class Locators {
      
      // USER NAME DROP DOWN BUTTON//     
      public static By Username_Dropdownbox= By.id("navbarDropdown");
-     public static By Dashboard_button= By.xpath("//*[@id='navbarSupportedContent']/ul/li[6]/div/div/a[1]");
-     public static By profile_botton= By.xpath("//*[@id='navbarSupportedContent']/ul/li[6]/div/div/a[2]");
-     public static By messages_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[6]/div/div/a[3]");
-     public static By Notifications_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[6]/div/div/a[4]");
-     public static By Finance_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[6]/div/div/a[5]");
-     public static By Settings_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[6]/div/div/a[6]");
-     public static By Logout_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[6]/div/div/a[7]");
+     public static By Dashboard_button= By.xpath("//*[@id='navbarSupportedContent']/ul/li[7]/div/div/a[1]");
+     public static By profile_botton= By.xpath("//*[@id='navbarSupportedContent']/ul/li[7]/div/div/a[2]");
+     public static By messages_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[7]/div/div/a[3]");
+     public static By Notifications_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[7]/div/div/a[4]");
+     public static By Finance_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[7]/div/div/a[5]");
+     public static By Settings_button=By.xpath("//*[@id='navbarSupportedContent']/ul/li[7]/div/div/a[6]");
+     public static By Logout_button=By.xpath("//*[@id=\"navbarSupportedContent\"]/ul/li[7]/div/div/a[7]");
      
      // FREELANCER EDITPROFILE//
    public static By EditProfile_Button = By.linkText("Edit Profile");
@@ -101,6 +101,58 @@ public class Locators {
    public static By Dispute_button=By.linkText("DISPUTE");
    public static By projectstatusbar_button=By.id("price-max0");
    public static By projectDescription=By.xpath("(//div[@class=\"cl-review\"]/p)[1]");
+   
+   //Forgotpassword login//
+   public static By ForgotPassword=By.linkText("Forgot password?");
+   public static By EnterEmail=By.name("emailId");
+   public static By GeneratePassword=By.xpath("//div[@class=\"col\"]");
+    
+   //EditprofileButton for Freelancer//
+   public static By Edit_Button =By.linkText("Edit Profile");
+   public static By Name_Textbox = By.id("myInput3-2");
+   public static By About_Textbox = By.id("about");
+   public static By DOB_DropdownButton = By.name("date");
+   public static By Location_Textbox = By.id("myInput2-1");
+   public static By Phone_Textbox = By.id("myInput3-1");
+   public static By EntryLevel_Spinbox = By.id("inputGroupSelect04");
+   public static By WorkType_Spinbox = By.id("workType");
+   public static By Skills_DropDownButton = By.xpath("//*[@id=\"mat-select-3\"]/div/div[1]/span/span");
+   public static By EmailID_textbox = By.xpath("//*[@id='nav-home']/div[3]/div[2]/div/div/input");
+   public static By LINKEDIN_Textbox = By.id("myInput5-1");
+   public static By SKYPE_Textbox = By.id("myInput3");
+   public static By Language_DropDownbutton = By.xpath("//*[@id='mat-select-3']/div/div[1]");
+   public static By PricePerHour = By.id("price");
+   public static By UpdateAccountSettings = By.xpath("//div[@class='col ng-star-inserted']");
+   public static By cancelAccountSettings = By.xpath("//div[@class='col']");
+   
+   //EditprofileButton for client//
+   public static By Edit_button =By.linkText("Edit Profile");
+   public static By Name_TextBox = By.id("myInput3-2");
+   public static By About_TextBox = By.id("about");
+   public static By DOB_Dropdownbutton = By.name("date");
+   public static By Location_TextBox = By.id("myInput2-1");
+   public static By Phone_TextBox = By.id("myInput3-1");
+   public static By Language_DropDownButton = By.xpath("//div[@class='mat-select-value']");
+   public static By EmailId_TextBox = By.xpath("//*[@id='nav-home']/div[3]/div[2]/div/div/input");
+   public static By LINKEDIN_TextBox = By.id("myInput5-1");
+   public static By SKYPE_TextBox = By.id("myInput3");
+   public static By Companynmae_textbox = By.id("companyName");
+   
+   //Editprofile FinanceButton//
+   public static By Finance_Button = By.id("nav-contact-tab");
+   public static By CLAddress_Textbox = By.xpath("//*[@id='nav-tabContent']/app-finance-settings/div[1]/div/div/input");
+   
+ //Editprofile changepasswordButton//
+   public static By Changepassword_button = By.id("nav-home-tab");
+   public static By Currentpassword_Textbox = By.name("currentpassword");
+   public static By NewPassword_Textbox = By.name("newpassword");
+   public static By Confirmpassword_Textbox = By.name("conformpassword");
+   public static By Submit_Button = By.xpath("//div[@class='col-md-6 mb-3'][1]");
+   public static By Clear_Button = By.xpath("//div[@class='col-md-6 mb-3'][2]");
+   
+   
+   
+   
    
    
    

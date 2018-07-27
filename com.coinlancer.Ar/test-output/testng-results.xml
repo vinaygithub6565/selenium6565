@@ -8,26 +8,26 @@
       <![CDATA[About to begin executing Test Default test]]>
     </line>
     <line>
-      <![CDATA[Test Method resides in com.coinlancer.SignUp.SignUp]]>
+      <![CDATA[Test Method resides in com.coinlancerProjectSpecificCommon.PostAproject]]>
     </line>
     <line>
       <![CDATA[Test Status: Pass]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24677" started-at="2018-07-23T05:08:19Z" finished-at="2018-07-23T05:08:43Z">
+  <suite name="Default suite" duration-ms="15726" started-at="2018-07-24T11:57:21Z" finished-at="2018-07-24T11:57:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24677" started-at="2018-07-23T05:08:19Z" finished-at="2018-07-23T05:08:43Z">
-      <class name="com.coinlancer.SignUp.SignUp">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.coinlancer.SignUp.SignUp@56ef9176]" name="openBrowser" is-config="true" duration-ms="6499" started-at="2018-07-23T05:08:19Z" finished-at="2018-07-23T05:08:25Z">
+    <test name="Default test" duration-ms="15726" started-at="2018-07-24T11:57:21Z" finished-at="2018-07-24T11:57:37Z">
+      <class name="com.coinlancerProjectSpecificCommon.PostAproject">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.coinlancerProjectSpecificCommon.PostAproject@56ef9176]" name="openBrowser" is-config="true" duration-ms="3884" started-at="2018-07-24T11:57:21Z" finished-at="2018-07-24T11:57:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.coinlancer.SignUp.SignUp@56ef9176]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-07-23T05:08:26Z" finished-at="2018-07-23T05:08:26Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.coinlancerProjectSpecificCommon.PostAproject@56ef9176]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2018-07-24T11:57:25Z" finished-at="2018-07-24T11:57:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.coinlancer.SignUp.SignUp.verifyRegistration() throws java.io.IOException]]>
+                <![CDATA[public void com.coinlancerProjectSpecificCommon.PostAproject.verifypostaproject() throws java.io.IOException]]>
               </value>
             </param>
             <param index="1">
@@ -39,28 +39,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyRegistration()[pri:0, instance:com.coinlancer.SignUp.SignUp@56ef9176]" name="verifyRegistration" duration-ms="17395" started-at="2018-07-23T05:08:26Z" finished-at="2018-07-23T05:08:43Z">
+        <test-method status="PASS" signature="verifypostaproject()[pri:0, instance:com.coinlancerProjectSpecificCommon.PostAproject@56ef9176]" name="verifypostaproject" duration-ms="11447" started-at="2018-07-24T11:57:26Z" finished-at="2018-07-24T11:57:37Z">
           <reporter-output>
             <line>
-              <![CDATA[Test Method resides in com.coinlancer.SignUp.SignUp]]>
+              <![CDATA[Test Method resides in com.coinlancerProjectSpecificCommon.PostAproject]]>
             </line>
             <line>
               <![CDATA[Test Status: Pass]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyRegistration -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.coinlancer.SignUp.SignUp@56ef9176]" name="afterMethod" is-config="true" duration-ms="33" started-at="2018-07-23T05:08:43Z" finished-at="2018-07-23T05:08:43Z">
+        </test-method> <!-- verifypostaproject -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.coinlancerProjectSpecificCommon.PostAproject@56ef9176]" name="afterMethod" is-config="true" duration-ms="42" started-at="2018-07-24T11:57:37Z" finished-at="2018-07-24T11:57:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyRegistration status=SUCCESS method=SignUp.verifyRegistration()[pri:0, instance:com.coinlancer.SignUp.SignUp@56ef9176] output=Test Method resides in com.coinlancer.SignUp.SignUp]]]>
+                <![CDATA[[TestResult name=verifypostaproject status=SUCCESS method=PostAproject.verifypostaproject()[pri:0, instance:com.coinlancerProjectSpecificCommon.PostAproject@56ef9176] output=Test Method resides in com.coinlancerProjectSpecificCommon.PostAproject]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.coinlancer.SignUp.SignUp -->
+      </class> <!-- com.coinlancerProjectSpecificCommon.PostAproject -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

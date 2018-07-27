@@ -1,4 +1,4 @@
-package com.coinlancer.SignUp;
+package com.coinlancerProjectSpecificCommon;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -23,6 +23,9 @@ public class PostAproject extends Base {
 	public void verifypostaproject() throws IOException {
 		String userName = ReadProperties.getPropValue("Username");
 		String password = ReadProperties.getPropValue("Password");
+		String Projecttitle = ReadProperties.getPropValue("ProjectTitle");
+		String Projectdescription = ReadProperties.getPropValue("ProjectDescription");
+		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		openUrl(url);
 		getWhenVisible(Postaproject_Button);
@@ -33,6 +36,10 @@ public class PostAproject extends Base {
 		enterText(password_Textbox, password);
 		clickElement(details_Login);
 		clickElement(Postaproject_Button);
+		enterText(ProjectTitle_Textbox,Projecttitle);
+		enterText(ProjectDescription_Textbox,Projectdescription);
+		
+
 	}
 
 }
